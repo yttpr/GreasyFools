@@ -1,0 +1,383 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>10.0</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="assetss\assetss.geese" />
+	  <None Remove="assetss\SinnoksOverworld.png" />
+	  <None Remove="Fel\GreasyFools\Textures\FelBack.png" />
+	  <None Remove="Fel\GreasyFools\Textures\FelFront.png" />
+	  <None Remove="Fel\GreasyFools\Textures\FelMenu.png" />
+	  <None Remove="Fel\GreasyFools\Textures\FelWorld.png" />
+	  <None Remove="Fel\GreasyFools\Textures\Poke .png" />
+	  <None Remove="Fel\GreasyFools\Textures\Smooth.png" />
+	  <None Remove="Fel\GreasyFools\Textures\SwiftStatus.png" />
+	  <None Remove="Fel\GreasyFools\Textures\Vindicate.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\Condemn.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\Exposure.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\OathsBack.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\OathsFront.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\OathsMenu.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\OathsWorld.png" />
+	  <None Remove="Oaths\GreasyFools\Textures\Smoulder.png" />
+	  <None Remove="omegarager\GreasyFools\Textures\RedRagerOMEGA_Back.png" />
+	  <None Remove="omegarager\GreasyFools\Textures\RedRagerOMEGA_Front.png" />
+	  <None Remove="omegarager\GreasyFools\Textures\SleepOMEGAstatus.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Affliction.png" />
+	  <None Remove="Resources\GreasyFools\Textures\BiersalBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\BiersalFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\BiersalMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\BiersalWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\BrittleBones.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Brute.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Buckler.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Clense.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Crumble.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Crusade.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DecayIcon.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DeflectIcon.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DerekBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DerekFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DerekMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DerekWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Destructor.png" />
+	  <None Remove="Resources\GreasyFools\Textures\DoomedIcon.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Embrace.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Endure.png" />
+	  <None Remove="Resources\GreasyFools\Textures\essence.png" />
+	  <None Remove="Resources\GreasyFools\Textures\EVILPASSIVEICON.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Extinctor.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Extraction.png" />
+	  <None Remove="Resources\GreasyFools\Textures\gorge.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdBack1.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdBack2.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdFront1.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdFront2.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GourdWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GreasyFoolsIcon.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GururuBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GururuFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GururuMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\GururuWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Malignancy.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Nullify.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Pact.png" />
+	  <None Remove="Resources\GreasyFools\Textures\PBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\PFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\PMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Prevention.png" />
+	  <None Remove="Resources\GreasyFools\Textures\PWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\QuorellBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\QuorellFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\QuorellMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\QuorellWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\RagerRedMenu.png" />
+	  <None Remove="Resources\GreasyFools\Textures\RagerRedWorld.png" />
+	  <None Remove="Resources\GreasyFools\Textures\RedRagerBack.png" />
+	  <None Remove="Resources\GreasyFools\Textures\RedRagerFront.png" />
+	  <None Remove="Resources\GreasyFools\Textures\sleep.png" />
+	  <None Remove="Resources\GreasyFools\Textures\sleepstatus.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Slep.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Splitter.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Tussle.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Yum.png" />
+	  <None Remove="Resources\GreasyFools\Textures\Zul.png" />
+	  <None Remove="Resources\QuorellNormalFront.png" />
+	  <None Remove="Stain\GreasyFools\Textures\Chop.png" />
+	  <None Remove="Stain\GreasyFools\Textures\Cleave.png" />
+	  <None Remove="Stain\GreasyFools\Textures\Forge.png" />
+	  <None Remove="Stain\GreasyFools\Textures\StainBack.png" />
+	  <None Remove="Stain\GreasyFools\Textures\StainFrontt.png" />
+	  <None Remove="Stain\GreasyFools\Textures\Stainmenu.png" />
+	  <None Remove="Stain\GreasyFools\Textures\Stainworld.png" />
+	  <None Remove="text2\GreasyFools\Textures\AFFLICTION_A.png" />
+	  <None Remove="text2\GreasyFools\Textures\Decay.png" />
+	  <None Remove="text2\GreasyFools\Textures\Intimidate.png" />
+	  <None Remove="text2\GreasyFools\Textures\NULLIFY_A.png" />
+	  <None Remove="text2\GreasyFools\Textures\Passive_Tumor.png" />
+	  <None Remove="text2\GreasyFools\Textures\Pummel.png" />
+	  <None Remove="text2\GreasyFools\Textures\Reconstruction.png" />
+	  <None Remove="text2\GreasyFools\Textures\RESTORE_A.png" />
+	  <None Remove="text2\GreasyFools\Textures\Wreckage.png" />
+	  <None Remove="tx3\GreasyFools\Textures\Gazed.png" />
+	  <None Remove="tx3\GreasyFools\Textures\Obsession.png" />
+	  <None Remove="tx3\GreasyFools\Textures\Tainted.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="assetss\assetss.geese" />
+	  <EmbeddedResource Include="assetss\SinnoksOverworld.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelBack.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelFront.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelMenu.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelWorld.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\Poke .png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\Smooth.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\SwiftStatus.png" />
+	  <EmbeddedResource Include="Fel\GreasyFools\Textures\Vindicate.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\Condemn.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\Exposure.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\OathsBack.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\OathsFront.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\OathsMenu.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\OathsWorld.png" />
+	  <EmbeddedResource Include="Oaths\GreasyFools\Textures\Smoulder.png" />
+	  <EmbeddedResource Include="omegarager\GreasyFools\Textures\RedRagerOMEGA_Back.png" />
+	  <EmbeddedResource Include="omegarager\GreasyFools\Textures\RedRagerOMEGA_Front.png" />
+	  <EmbeddedResource Include="omegarager\GreasyFools\Textures\SleepOMEGAstatus.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Affliction.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\BiersalBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\BiersalFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\BiersalMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\BiersalWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\BrittleBones.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Brute.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Buckler.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Clense.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Crumble.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Crusade.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DecayIcon.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DeflectIcon.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DerekBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DerekFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DerekMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DerekWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Destructor.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\DoomedIcon.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Embrace.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Endure.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\essence.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\EVILPASSIVEICON.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Extinctor.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Extraction.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\gorge.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdBack1.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdBack2.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdFront1.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdFront2.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GourdWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GreasyFoolsIcon.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GururuBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GururuFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GururuMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\GururuWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Malignancy.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Nullify.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Pact.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\PBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\PFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\PMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Prevention.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\PWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\QuorellBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\QuorellFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\QuorellMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\QuorellWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\RagerRedMenu.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\RagerRedWorld.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\RedRagerBack.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\RedRagerFront.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\sleep.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\sleepstatus.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Slep.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Splitter.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Tussle.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Yum.png" />
+	  <EmbeddedResource Include="Resources\GreasyFools\Textures\Zul.png" />
+	  <EmbeddedResource Include="Resources\QuorellNormalFront.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\Chop.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\Cleave.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\Forge.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\StainBack.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\StainFrontt.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\Stainmenu.png" />
+	  <EmbeddedResource Include="Stain\GreasyFools\Textures\Stainworld.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\AFFLICTION_A.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Decay.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Intimidate.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\NULLIFY_A.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Passive_Tumor.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Pummel.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Reconstruction.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\RESTORE_A.png" />
+	  <EmbeddedResource Include="text2\GreasyFools\Textures\Wreckage.png" />
+	  <EmbeddedResource Include="tx3\GreasyFools\Textures\Gazed.png" />
+	  <EmbeddedResource Include="tx3\GreasyFools\Textures\Obsession.png" />
+	  <EmbeddedResource Include="tx3\GreasyFools\Textures\Tainted.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <outerence Include="0Harmony">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\0Harmony.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Album">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Album.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Assembly-CSharp">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Assembly-CSharp.dll</HintPath>
+	  </outerence>
+	  <outerence Include="BepInEx">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\BepInEx.dll</HintPath>
+	  </outerence>
+	  <outerence Include="BrutalAPI">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\BrutalAPI.dll</HintPath>
+	  </outerence>
+	  <outerence Include="DOTween">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\DOTween.dll</HintPath>
+	  </outerence>
+	  <outerence Include="FMODUnity">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\FMODUnity.dll</HintPath>
+	  </outerence>
+	  <outerence Include="FMODUnityResonance">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\FMODUnityResonance.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Marosi.SerializableCollections">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Marosi.SerializableCollections.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Marosi.Utility">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Marosi.Utility.dll</HintPath>
+	  </outerence>
+	  <outerence Include="MonoMod.RuntimeDetour">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\MonoMod.RuntimeDetour.dll</HintPath>
+	  </outerence>
+	  <outerence Include="MonoMod.Utils">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\MonoMod.Utils.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Unity.InputSystem">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Unity.InputSystem.dll</HintPath>
+	  </outerence>
+	  <outerence Include="Unity.TextMeshPro">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\Unity.TextMeshPro.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.AnimationModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.AnimationModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.AssetBundleModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.AssetBundleModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.AudioModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.AudioModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.CoreModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.ImageConversionModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.ImageConversionModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.InputModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.InputModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.ParticleSystemModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.ParticleSystemModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.UI">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.UI.dll</HintPath>
+	  </outerence>
+	  <outerence Include="UnityEngine.UIModule">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\UnityEngine.UIModule.dll</HintPath>
+	  </outerence>
+	  <outerence Include="YarnSpinner">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\YarnSpinner.dll</HintPath>
+	  </outerence>
+	  <outerence Include="YarnSpinner.Compiler">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\YarnSpinner.Compiler.dll</HintPath>
+	  </outerence>
+	  <outerence Include="YarnSpinner.Unity">
+	    <HintPath>..\..\..\the folder for outerences VS\BO Modding Generic Dependencies\YarnSpinner.Unity.dll</HintPath>
+	  </outerence>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="0Harmony">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\0Harmony.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Album">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Album.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Assembly-CSharp.dll</HintPath>
+	  </Reference>
+	  <Reference Include="BepInEx">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\BepInEx.dll</HintPath>
+	  </Reference>
+	  <Reference Include="BrutalAPI">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\BrutalAPI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="DOTween">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\DOTween.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FMODUnity">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\FMODUnity.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FMODUnityResonance">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\FMODUnityResonance.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Marosi.SerializableCollections">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Marosi.SerializableCollections.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Marosi.Utility">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Marosi.Utility.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MonoMod.RuntimeDetour">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\MonoMod.RuntimeDetour.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MonoMod.Utils">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\MonoMod.Utils.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.InputSystem">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Unity.InputSystem.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.TextMeshPro">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Unity.TextMeshPro.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AnimationModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AnimationModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AssetBundleModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AssetBundleModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AudioModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AudioModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.CoreModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.ImageConversionModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.ImageConversionModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.InputModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.InputModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.ParticleSystemModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.ParticleSystemModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UI">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.UI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.UIModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner.Compiler">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.Compiler.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner.Unity">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.Unity.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
