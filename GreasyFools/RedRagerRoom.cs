@@ -61,6 +61,12 @@ namespace GreasyFools
       };
       RedRagerRoom.Room._npcSelectable._renderers[0].material = Backrooms.Mat;
       ExtraMungItem extraMungItem = ((Component) RedRagerRoom.Room).transform.GetChild(1).gameObject.AddComponent<ExtraMungItem>();
+            extraMungItem._renderers = new SpriteRenderer[]
+            {
+                extraMungItem.transform.GetChild(0).GetComponent<SpriteRenderer>(),
+            };
+            extraMungItem._renderers[0].material = Backrooms.Mat;
+            Room._extraSelectable = extraMungItem;
       ((BaseRoomItem) extraMungItem)._renderers = new SpriteRenderer[1]
       {
         ((Component) extraMungItem).transform.GetChild(0).GetComponent<SpriteRenderer>()
