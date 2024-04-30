@@ -107,7 +107,7 @@ namespace GreasyFools
       ((DamageEffect) ability5.effects[0]._effect)._returnKillAsSuccess = true;
       ability5.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 5, new IntentType?((IntentType) 1), Slots.LeftRight, (EffectConditionSO) instance1);
       ability5.animationTarget = Slots.Front;
-      ability5.visuals = LoadedAssetsHandler.GetCharcater("Burnout_CH").rankedData[0].rankAbilities[1].ability.visuals;
+      ability5.visuals = CustomVisuals.GetVisuals("Greasy/Splitter");
       Ability ability6 = new Ability();
       ability6.sprite = ResourceLoader.LoadSprite("Splitter", 1);
       ability6.name = "Ruthless Splitter";
@@ -123,7 +123,7 @@ namespace GreasyFools
       ((DamageEffect) ability6.effects[0]._effect)._returnKillAsSuccess = true;
       ability6.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 8, new IntentType?((IntentType) 2), Slots.LeftRight, (EffectConditionSO) instance1);
       ability6.animationTarget = Slots.Front;
-      ability6.visuals = LoadedAssetsHandler.GetCharcater("Burnout_CH").rankedData[0].rankAbilities[1].ability.visuals;
+      ability6.visuals = CustomVisuals.GetVisuals("Greasy/Splitter");
       Ability ability7 = new Ability();
       ability7.sprite = ResourceLoader.LoadSprite("Splitter", 1);
       ability7.name = "Unforgiving Splitter";
@@ -139,7 +139,7 @@ namespace GreasyFools
       ((DamageEffect) ability7.effects[0]._effect)._returnKillAsSuccess = true;
       ability7.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 11, new IntentType?((IntentType) 3), Slots.LeftRight, (EffectConditionSO) instance1);
       ability7.animationTarget = Slots.Front;
-      ability7.visuals = LoadedAssetsHandler.GetCharcater("Burnout_CH").rankedData[0].rankAbilities[1].ability.visuals;
+      ability7.visuals = CustomVisuals.GetVisuals("Greasy/Splitter");
       Ability ability8 = new Ability();
       ability8.sprite = ResourceLoader.LoadSprite("Splitter", 1);
       ability8.name = "Killer Splitter";
@@ -155,7 +155,7 @@ namespace GreasyFools
       ((DamageEffect) ability8.effects[0]._effect)._returnKillAsSuccess = true;
       ability8.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 14, new IntentType?((IntentType) 3), Slots.LeftRight, (EffectConditionSO) instance1);
       ability8.animationTarget = Slots.Front;
-      ability8.visuals = LoadedAssetsHandler.GetCharcater("Burnout_CH").rankedData[0].rankAbilities[1].ability.visuals;
+      ability8.visuals = CustomVisuals.GetVisuals("Greasy/Splitter");
       DamageBasedOnHealthColor instance2 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
       instance2.manaDamages = new DamageifPigment[3]
       {
@@ -176,7 +176,7 @@ namespace GreasyFools
       ability9.effects = new Effect[1];
       ability9.effects[0] = new Effect((EffectSO) instance2, 6, new IntentType?((IntentType) 4), Slots.Front);
       ability9.animationTarget = Slots.Front;
-      ability9.visuals = LoadedAssetsHandler.GetCharcater("Bimini_CH").rankedData[0].rankAbilities[1].ability.visuals;
+      ability9.visuals = CustomVisuals.GetVisuals("Greasy/Brute");
       DamageBasedOnHealthColor instance3 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
       instance3.manaDamages = new DamageifPigment[4]
       {
@@ -198,8 +198,8 @@ namespace GreasyFools
       ability10.effects = new Effect[1];
       ability10.effects[0] = new Effect((EffectSO) instance3, 6, new IntentType?((IntentType) 5), Slots.Front);
       ability10.animationTarget = Slots.Front;
-      ability10.visuals = LoadedAssetsHandler.GetCharcater("Bimini_CH").rankedData[0].rankAbilities[1].ability.visuals;
-      DamageBasedOnHealthColor instance4 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
+      ability10.visuals = CustomVisuals.GetVisuals("Greasy/Brute");
+            DamageBasedOnHealthColor instance4 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
       instance4.manaDamages = new DamageifPigment[4]
       {
         new DamageifPigment(Pigments.Blue, 20),
@@ -220,8 +220,8 @@ namespace GreasyFools
       ability11.effects = new Effect[1];
       ability11.effects[0] = new Effect((EffectSO) instance4, 6, new IntentType?((IntentType) 5), Slots.Front);
       ability11.animationTarget = Slots.Front;
-      ability11.visuals = LoadedAssetsHandler.GetCharcater("Bimini_CH").rankedData[0].rankAbilities[1].ability.visuals;
-      DamageBasedOnHealthColor instance5 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
+      ability11.visuals = CustomVisuals.GetVisuals("Greasy/Brute");
+            DamageBasedOnHealthColor instance5 = ScriptableObject.CreateInstance<DamageBasedOnHealthColor>();
       instance5.manaDamages = new DamageifPigment[4]
       {
         new DamageifPigment(Pigments.Blue, 22),
@@ -242,8 +242,8 @@ namespace GreasyFools
       ability12.effects = new Effect[1];
       ability12.effects[0] = new Effect((EffectSO) instance5, 6, new IntentType?((IntentType) 5), Slots.Front);
       ability12.animationTarget = Slots.Front;
-      ability12.visuals = LoadedAssetsHandler.GetCharcater("Bimini_CH").rankedData[0].rankAbilities[1].ability.visuals;
-      character.AddLevel(12, new Ability[3]
+      ability12.visuals = CustomVisuals.GetVisuals("Greasy/Brute");
+            character.AddLevel(12, new Ability[3]
       {
         ability1,
         ability5,

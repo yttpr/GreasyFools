@@ -53,7 +53,7 @@ namespace GreasyFools
     {
       BrutalAPI.BrutalAPI.AddSignType((SignType) RedRagerRoom.ID, RedRagerRoom.Portal);
       RedRagerRoom.Base = Backrooms.Assets.LoadAsset<GameObject>("Assets/Raams/" + RedRagerRoom.Name + "Room.prefab");
-      RedRagerRoom.Room = RedRagerRoom.Base.AddComponent<NPCRoomHandler>();
+      RedRagerRoom.Room = RedRagerRoom.Base.AddComponent<ExtraMungRoomHandler>();
       RedRagerRoom.Room._npcSelectable = (BaseRoomItem) ((Component) RedRagerRoom.Room).transform.GetChild(0).gameObject.AddComponent<BasicRoomItem>();
       RedRagerRoom.Room._npcSelectable._renderers = new SpriteRenderer[1]
       {

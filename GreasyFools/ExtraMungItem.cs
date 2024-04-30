@@ -5,7 +5,7 @@
 // Assembly location: C:\Users\windows\Downloads\GreasyFools.dll
 
 using UnityEngine;
-
+using Tools;
 #nullable disable
 namespace GreasyFools
 {
@@ -35,4 +35,17 @@ namespace GreasyFools
 
     public void Setup() => ((BaseRoomItem) this).Notification = "mungugugugug";
   }
+
+    public class ExtraMungRoomHandler : NPCRoomHandler
+    {
+        public override void PopulateRoom(IGameCheckData gameData, IMinimalRunInfoData runData, IMinimalZoneInfoData zoneData, int dataID)
+        {
+            base.PopulateRoom(gameData, runData, zoneData, dataID);
+            if (_extraSelectable != null)
+            {
+                DialogueDataReference args = new DialogueDataReference(dataID, _dialogueMusic);
+                _extraSelectable.SetClickData(Utils.startDialogNtf, args);
+            }
+        }
+    }
 }

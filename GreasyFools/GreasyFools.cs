@@ -19,6 +19,7 @@ namespace GreasyFools
   {
     public void Awake()
     {
+            EZExtensions.PCall(CustomVisuals.Setup, "Custom visuals");
       EZExtensions.PCall(new Action(AbilityNameFix.Setup), "ability name fix");
       EZExtensions.PCall(new Action(HooksGeneral.Setup), "general hooks salt");
       EZExtensions.PCall(new Action(PigmentUsedCollector.Setup), "last pigment used collector");
@@ -38,7 +39,7 @@ namespace GreasyFools
       IDetour idetour2 = (IDetour) new Hook((MethodBase) typeof (IntentHandlerSO).GetMethod("Initialize", ~BindingFlags.Default), typeof (CustomeStatusEffects).GetMethod("AddDeflectIntent", ~BindingFlags.Default));
       IDetour idetour3 = (IDetour) new Hook((MethodBase) typeof (CharacterCombat).GetMethod("ApplyStatusEffect", ~BindingFlags.Default), typeof (GreasyFools).GetMethod("ApplyStatusEffect", ~BindingFlags.Default));
       this.Logger.LogInfo((object) "Greasy Fools mod loaded successly");
-            EZExtensions.PCall(Backrooms.BoostFoolAll, "more fool");
+            //EZExtensions.PCall(Backrooms.BoostFoolAll, "more fool");
     }
 
     public static bool ApplyStatusEffect(
