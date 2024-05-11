@@ -27,7 +27,7 @@ namespace GreasyFools
 
     private static Character chara => Quorell.bird;
 
-    private static int Zone => 1;
+    private static int Zone => 2;
 
     private static bool Left => false;
 
