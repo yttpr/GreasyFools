@@ -32,11 +32,16 @@ namespace GreasyFools
       ((BasePassiveAbilitySO) instance3)._enemyDescription = "THIS MF IS NOT SLEEPY";
       ((BasePassiveAbilitySO) instance3)._characterDescription = "So sleepy.";
       ((BasePassiveAbilitySO) instance3).specialStoredValue = (UnitStoredValueNames) 84512;
-      instance3.effects = ExtensionMethods.ToEffectInfoArray(new Effect[3]
+            CasterStoredValueChangeEffect awake = ScriptableObject.CreateInstance<CasterStoredValueChangeEffect>();
+            awake._valueName = (UnitStoredValueNames)84512;
+            awake._minimumValue = 0;
+            awake._increase = false;
+      instance3.effects = ExtensionMethods.ToEffectInfoArray(new Effect[]
       {
         new Effect((EffectSO) ScriptableObject.CreateInstance<RedRagerRefreashCheckEffect>(), 1, new IntentType?(), Slots.Self),
         new Effect((EffectSO) ScriptableObject.CreateInstance<RedRagerSleepValueEffect>(), 1, new IntentType?(), Slots.Self, (EffectConditionSO) instance2),
-        new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?(), Slots.Self, (EffectConditionSO) instance1)
+        new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?(), Slots.Self, (EffectConditionSO) instance1),
+        new Effect(awake, 1, null, Slots.Self, EZEffects.DidThat<PreviousEffectCondition>(true, 1))
       });
       ((BasePassiveAbilitySO) instance3)._triggerOn = new TriggerCalls[1]
       {
@@ -141,62 +146,66 @@ namespace GreasyFools
       Ability ability5 = new Ability();
       ability5.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability5.name = "Goofy Sleep";
-      ability5.description = "Goes to sleep.\nApply 2 shield to this party member's current position.\nGain a guaranteed refresh next turn, this effect stacks.";
+      ability5.description = "Goes to sleep.\nApply 2 shield to this party member's current position and heal them 1 health.\nGain a guaranteed refresh next turn, this effect stacks.";
       ability5.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)
       };
-      ability5.effects = new Effect[3];
+      ability5.effects = new Effect[4];
       ability5.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?(), Slots.Self);
       ability5.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability5.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?((IntentType) 171), Slots.Self);
+            ability5.effects[3] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 1, IntentType.Heal_1_4, Slots.Self);
       ability5.animationTarget = Slots.Self;
       ability5.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability6 = new Ability();
       ability6.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability6.name = "Light Sleep";
-      ability6.description = "Goes to sleep.\nApply 3 shield to this party member's current position.\nGain a guaranteed refresh next turn, this effect stacks.";
+      ability6.description = "Goes to sleep.\nApply 3 shield to this party member's current position and heal them 1 health.\nGain a guaranteed refresh next turn, this effect stacks.";
       ability6.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)
       };
-      ability6.effects = new Effect[3];
+      ability6.effects = new Effect[4];
       ability6.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?(), Slots.Self);
       ability6.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability6.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 3, new IntentType?((IntentType) 171), Slots.Self);
-      ability6.animationTarget = Slots.Self;
+            ability6.effects[3] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 1, IntentType.Heal_1_4, Slots.Self);
+            ability6.animationTarget = Slots.Self;
       ability6.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability7 = new Ability();
       ability7.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability7.name = "Deep Sleep";
-      ability7.description = "Goes to sleep.\nApply 4 shield to this party member's current position.\nGain a guaranteed refresh next turn, this effect stacks.";
+      ability7.description = "Goes to sleep.\nApply 4 shield to this party member's current position and heal them 1 health..\nGain a guaranteed refresh next turn, this effect stacks.";
       ability7.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)
       };
-      ability7.effects = new Effect[3];
+      ability7.effects = new Effect[4];
       ability7.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?(), Slots.Self);
       ability7.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability7.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 4, new IntentType?((IntentType) 171), Slots.Self);
-      ability7.animationTarget = Slots.Self;
+            ability7.effects[3] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 1, IntentType.Heal_1_4, Slots.Self);
+            ability7.animationTarget = Slots.Self;
       ability7.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability8 = new Ability();
       ability8.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability8.name = "THE Sleep";
-      ability8.description = "Goes to sleep.\nApply 5 shield to this party member's current position.\nGain a guaranteed refresh next turn, this effect stacks.";
+      ability8.description = "Goes to sleep.\nApply 5 shield to this party member's current position and heal them 1 health.\nGain a guaranteed refresh next turn, this effect stacks.";
       ability8.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)
       };
-      ability8.effects = new Effect[3];
+      ability8.effects = new Effect[4];
       ability8.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?(), Slots.Self);
       ability8.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability8.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 5, new IntentType?((IntentType) 171), Slots.Self);
-      ability8.animationTarget = Slots.Self;
+            ability8.effects[3] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 1, IntentType.Heal_1_4, Slots.Self);
+            ability8.animationTarget = Slots.Self;
       ability8.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability9 = new Ability();
       ability9.sprite = ResourceLoader.LoadSprite("essence", 1);

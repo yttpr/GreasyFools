@@ -8,6 +8,11 @@ using BrutalAPI;
 using GreasyFools.Effects;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using MonoMod.RuntimeDetour;
+using System.Reflection;
+using UnityEngine.UI;
+using System.Collections;
 
 #nullable disable
 namespace GreasyFools
@@ -22,7 +27,7 @@ namespace GreasyFools
     {
       get
       {
-        if ((Object) Quorell._menuFront == (Object) null)
+        if ( Quorell._menuFront ==  null)
           Quorell._menuFront = ResourceLoader.LoadSprite("QuorellNormalFront.png");
         return Quorell._menuFront;
       }
@@ -32,7 +37,7 @@ namespace GreasyFools
     {
       get
       {
-        if ((Object) Quorell._battleFront == (Object) null)
+        if (Quorell._battleFront == null)
           Quorell._battleFront = ResourceLoader.LoadSprite("QuorellFront.png");
         return Quorell._battleFront;
       }
@@ -189,6 +194,7 @@ namespace GreasyFools
         ignoredAbilities = new List<int>() { 0, 2 }
       });
       Quorell.bird = character;
+            EZExtensions.PCall(QuorellHandler.Setup, "extra handlers wow");
     }
 
     public static void Menu()
@@ -213,6 +219,114 @@ namespace GreasyFools
       {
         Debug.LogWarning((object) "quorell's front sprite failed to set for battle");
       }
+            CharacterCombat c;
+            CharacterCombatUIInfo u;
+            OnCharacterClickedImmediateAction a;
+            CharacterInFieldLayout l;
+            CombatVisualizationController v;
     }
   }
+
+    public static class QuorellHandler
+    {
+        public static void SetCharacterInformation(Action<InformationZoneLayout, CharacterCombatUIInfo, SlotCombatUIInfo> orig, InformationZoneLayout self, CharacterCombatUIInfo character, SlotCombatUIInfo characterSlot)
+        {
+            orig(self, character, characterSlot);
+            try
+            {
+                if (character.Name.Contains("Quorell"))
+                {
+                    self.UpdateUnitPortrait(Quorell.MenuFront);
+                }
+            }
+            catch
+            {
+                Debug.LogError("PAIN");
+            }
+        }
+        public static void OnStartDrag(Action<CombatPointerLayout, DraggableCombatLayout> orig, CombatPointerLayout self, DraggableCombatLayout dragItem)
+        {
+            if (dragItem is CharacterInFieldLayout character)
+            {
+                foreach (CharacterCombatUIInfo chara in CombatManager.Instance._stats.combatUI._charactersInCombat.Values)
+                {
+                    if (chara.SlotID == character.SlotID)
+                    {
+                        if (chara.Name.Contains("Quorell"))
+                        {
+                            if (!self.IsDragging && !(dragItem == null))
+                            {
+                                self.CurrentDragItem = dragItem;
+                                self.StartCoroutine(QuorellDragging(self, dragItem.SlotImage));
+                            }
+                            return;
+                        }
+                        break;
+                    }
+                }
+            }
+            orig(self, dragItem);
+        }
+        public static IEnumerator QuorellDragging(CombatPointerLayout self, Image dragItem)
+        {
+            self.IsDragging = true;
+            self._dragIsActive = true;
+            Vector2 oldMousePosition = self._rawMousePosition;
+            GameObject currentDraggedObject = dragItem.gameObject;
+            RectTransform component = dragItem.GetComponent<RectTransform>();
+            self._pointerTransform.sizeDelta = component.rect.size;
+            self._pointerTransform.position = component.position;
+            self._pointerImage.enabled = true;
+            while (self._dragIsActive && currentDraggedObject.activeInHierarchy)
+            {
+                self._pointerImage.sprite = Quorell.MenuFront;
+                self._pointerTransform.anchoredPosition += (self._rawMousePosition - oldMousePosition) / self._canvas.scaleFactor;
+                oldMousePosition = self._rawMousePosition;
+                yield return null;
+            }
+
+            self._pointerImage.enabled = false;
+            self._dragIsActive = false;
+            self.IsDragging = false;
+        }
+
+        public static void Setup()
+        {
+            IDetour hook = new Hook(typeof(InformationZoneLayout).GetMethod(nameof(InformationZoneLayout.SetCharacterInformation), ~BindingFlags.Default), typeof(QuorellHandler).GetMethod(nameof(SetCharacterInformation), ~BindingFlags.Default));
+            IDetour hack = new Hook(typeof(CombatPointerLayout).GetMethod(nameof(CombatPointerLayout.OnStartDrag), ~BindingFlags.Default), typeof(QuorellHandler).GetMethod(nameof(OnStartDrag), ~BindingFlags.Default));
+        }
+        public static Image SlotImage
+        {
+            get
+            {
+                if (_image == null)
+                {
+                    GameObject trash = new GameObject();
+                    _image = trash.AddComponent<Image>();
+                    _image.sprite = Quorell.MenuFront;
+                    trash.SetActive(true);
+                }
+                return _image;
+            }
+        }
+        static Image _image;
+    }
+
+    public class QuorellInFieldLayout : CharacterInFieldLayout
+    {
+        public override Image SlotImage
+        {
+            get
+            {
+                if (_image == null)
+                {
+                    GameObject trash = new GameObject();
+                    _image = trash.AddComponent<Image>();
+                    _image.sprite = Quorell.MenuFront;
+                }
+                return _image;
+            }
+        }
+        Image _image;
+    }
 }
