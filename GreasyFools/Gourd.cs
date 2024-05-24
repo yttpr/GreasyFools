@@ -150,7 +150,7 @@ namespace GreasyFools
       ability9.visuals = (AttackVisualsSO) null;
       ability9.animationTarget = Slots.Front;
       ability9.effects = new Effect[5];
-      ability9.effects[0] = new Effect((EffectSO) EZEffects.GetVisuals<AnimationVisualsEffect>("Bash_A", false, Slots.Front), 1, new IntentType?(), Slots.Self, (EffectConditionSO) HasTumorsCondition.Create(2));
+      ability9.effects[0] = new Effect((EffectSO) EZEffects.GetVisuals<AnimationVisualsEffect>("Greasy/Brute", false, Slots.Front), 1, new IntentType?(), Slots.Self, (EffectConditionSO) HasTumorsCondition.Create(2));
       ability9.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 6, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) TargettingByConditionStatus.Create(Slots.Front, (StatusEffectType) 1, false), (EffectConditionSO) HasTumorsCondition.Create(2));
       ability9.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 12, new IntentType?((IntentType) 3), (BaseCombatTargettingSO) TargettingByConditionStatus.Create(Slots.Front, (StatusEffectType) 1), (EffectConditionSO) HasTumorsCondition.Create(2));
       ability9.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyFrailEffect>(), 2, new IntentType?((IntentType) 150), Slots.Front, (EffectConditionSO) HasTumorsCondition.Create(2));
