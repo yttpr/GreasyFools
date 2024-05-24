@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => DerekRoom.chara.frontSprite;
 
-    private static Sprite Portal => DerekRoom.chara.unlockedSprite;
+    private static Sprite Portal => DerekRoom.chara.overworldSprite;
 
     private static string Audio => DerekRoom.chara.dialogueSound;
 

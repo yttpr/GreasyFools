@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => OathsRoom.chara.frontSprite;
 
-    private static Sprite Portal => OathsRoom.chara.unlockedSprite;
+    private static Sprite Portal => OathsRoom.chara.overworldSprite;
 
     private static string Audio => OathsRoom.chara.dialogueSound;
 

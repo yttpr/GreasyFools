@@ -53,9 +53,9 @@ namespace GreasyFools
         overworldSprite = ResourceLoader.LoadSprite("OathsWorld.png", pivot: new Vector2?(new Vector2(0.5f, 0.0f))),
         unlockedSprite = ResourceLoader.LoadSprite("OathsMenu.png"),
         lockedSprite = ResourceLoader.LoadSprite("OathsMenu.png"),
-        hurtSound = LoadedAssetsHandler.GetCharcater("Rags_CH").damageSound,
-        deathSound = LoadedAssetsHandler.GetCharcater("Rags_CH").deathSound,
-        dialogueSound = LoadedAssetsHandler.GetCharcater("Rags_CH").dxSound,
+        hurtSound = "event:/Greasy/Oaths/OathsHurt",
+        deathSound = "event:/Greasy/Oaths/OathsDeath",
+        dialogueSound = "event:/Greasy/Oaths/OathsTalk",
         passives = new BasePassiveAbilitySO[1]
         {
           (BasePassiveAbilitySO) instance
@@ -73,7 +73,7 @@ namespace GreasyFools
         Pigments.Red,
         Pigments.Red
       };
-      ability1.visuals = LoadedAssetsHandler.GetCharacterAbility("Showdown_1_A").visuals;
+      ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Talons_A").visuals;
       ability1.animationTarget = Slots.Front;
       ability1.effects = new Effect[3];
       ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 10, new IntentType?((IntentType) 2), (BaseCombatTargettingSO) target);

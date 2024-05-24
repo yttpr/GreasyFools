@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => RedRagerRoom.chara.frontSprite;
 
-    private static Sprite Portal => RedRagerRoom.chara.unlockedSprite;
+    private static Sprite Portal => RedRagerRoom.chara.overworldSprite;
 
     private static string Audio => RedRagerRoom.chara.dialogueSound;
 

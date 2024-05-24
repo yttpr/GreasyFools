@@ -31,9 +31,9 @@ namespace GreasyFools
       character.isSupport = false;
       character.usesAllAbilities = false;
       character.appearsInShops = true;
-      character.hurtSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").damageSound;
-      character.deathSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").deathSound;
-      character.dialogueSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").dxSound;
+      character.hurtSound = "event:/Greasy/Biersal/BiersalHurt";
+      character.deathSound = "event:/Greasy/Biersal/BiersalDeath";
+      character.dialogueSound = "event:/Greasy/Biersal/BiersalTalk";
       PreviousEffectCondition instance1 = ScriptableObject.CreateInstance<PreviousEffectCondition>();
       instance1.wasSuccessful = true;
       Ability ability1 = new Ability();

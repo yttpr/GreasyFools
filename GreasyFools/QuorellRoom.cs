@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => QuorellRoom.chara.frontSprite;
 
-    private static Sprite Portal => QuorellRoom.chara.unlockedSprite;
+    private static Sprite Portal => QuorellRoom.chara.overworldSprite;
 
     private static string Audio => QuorellRoom.chara.dialogueSound;
 

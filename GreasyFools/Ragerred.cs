@@ -34,8 +34,9 @@ namespace GreasyFools
       };
       self.isSupport = false;
       self.appearsInShops = false;
-      self.hurtSound = LoadedAssetsHandler.GetCharcater("Gospel_CH").damageSound;
-      self.deathSound = LoadedAssetsHandler.GetCharcater("Gospel_CH").deathSound;
+      self.hurtSound = LoadedAssetsHandler.GetCharcater("Mung_CH").damageSound;
+      self.deathSound = LoadedAssetsHandler.GetCharcater("Mung_CH").deathSound;
+            self.dialogueSound = LoadedAssetsHandler.GetCharcater("Mung_CH").dxSound;
       self.levels = new CharacterRankedData[4];
       Ability ability1 = new Ability();
       ability1.sprite = ResourceLoader.LoadSprite("Yum");

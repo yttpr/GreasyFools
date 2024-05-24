@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => StainRoom.chara.frontSprite;
 
-    private static Sprite Portal => StainRoom.chara.unlockedSprite;
+    private static Sprite Portal => StainRoom.chara.overworldSprite;
 
     private static string Audio => StainRoom.chara.dialogueSound;
 

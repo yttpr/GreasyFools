@@ -19,6 +19,7 @@ namespace GreasyFools
   {
     public void Awake()
     {
+            EZExtensions.PCall(SoundClass.Setup, "sound class !!");
             EZExtensions.PCall(CustomVisuals.Setup, "Custom visuals");
       EZExtensions.PCall(new Action(AbilityNameFix.Setup), "ability name fix");
       EZExtensions.PCall(new Action(HooksGeneral.Setup), "general hooks salt");

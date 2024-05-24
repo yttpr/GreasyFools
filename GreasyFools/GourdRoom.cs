@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => GourdRoom.chara.frontSprite;
 
-    private static Sprite Portal => GourdRoom.chara.unlockedSprite;
+    private static Sprite Portal => GourdRoom.chara.overworldSprite;
 
     private static string Audio => GourdRoom.chara.dialogueSound;
 

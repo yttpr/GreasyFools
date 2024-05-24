@@ -65,6 +65,15 @@ namespace GreasyFools
         {
             LoadVisuals("Greasy/Brute", PymnHere.Assets, "assets/Ability/Ani/BruteAnim.anim", LoadedAssetsHandler.GetEnemyAbility("Crush_A").visuals.audioReference);
             LoadVisuals("Greasy/Splitter", PymnHere.Assets, "assets/Ability/Ani/SplitterAnim.anim", LoadedAssetsHandler.GetCharacterAbility("OfDeath_1_A").visuals.audioReference);
+            LoadVisuals("Greasy/Affliction", PymnHere.Assets, "Assets/AttackAnimGreasy/Affliction_A.anim", "event:/Greasy/Attack/Affliction_A");
+            LoadVisuals("Greasy/Buckler", PymnHere.Assets, "Assets/AttackAnimGreasy/Buckler_A.anim", LoadedAssetsHandler.GetCharacterAbility("Entrenched_1_A").visuals.audioReference);
+            LoadVisuals("Greasy/Decay", PymnHere.Assets, "Assets/AttackAnimGreasy/Decay_A.anim", "event:/Greasy/Attack/Decay_A");
+            LoadVisuals("Greasy/Forge", PymnHere.Assets, "Assets/AttackAnimGreasy/Forge_A.anim", "event:/Greasy/Attack/Forge_A");
+            LoadVisuals("Greasy/Intimidate", PymnHere.Assets, "Assets/AttackAnimGreasy/Intimidate_A.anim", "event:/Greasy/Attack/Intimidate_A");
+            LoadVisuals("Greasy/Nullify", PymnHere.Assets, "Assets/AttackAnimGreasy/Nullify_A.anim", "event:/Greasy/Attack/Vindicate_A");
+            LoadVisuals("Greasy/Pummel", PymnHere.Assets, "Assets/AttackAnimGreasy/Pummel_A.anim", "event:/Greasy/Attack/Pummel_A");
+            LoadVisuals("Greasy/Sleep", PymnHere.Assets, "Assets/AttackAnimGreasy/Sleep_A.anim", "event:/Greasy/Attack/Sleep_A");
+            LoadVisuals("Greasy/Vindicate", PymnHere.Assets, "Assets/AttackAnimGreasy/Vindicate_A.anim", "event:/Greasy/Attack/Vindicate_A");
 
         }
     }

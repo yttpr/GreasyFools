@@ -9,6 +9,8 @@
 	<ItemGroup>
 	  <None Remove="assetss\assetss.geese" />
 	  <None Remove="assetss\geese" />
+	  <None Remove="assetss\Jupiter.bank" />
+	  <None Remove="assetss\Jupiter.strings.bank" />
 	  <None Remove="assetss\SinnoksOverworld.png" />
 	  <None Remove="Fel\GreasyFools\Textures\FelBack.png" />
 	  <None Remove="Fel\GreasyFools\Textures\FelFront.png" />
@@ -112,6 +114,8 @@
 
 	<ItemGroup>
 	  <EmbeddedResource Include="assetss\geese" />
+	  <EmbeddedResource Include="assetss\Jupiter.bank" />
+	  <EmbeddedResource Include="assetss\Jupiter.strings.bank" />
 	  <EmbeddedResource Include="assetss\SinnoksOverworld.png" />
 	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelBack.png" />
 	  <EmbeddedResource Include="Fel\GreasyFools\Textures\FelFront.png" />

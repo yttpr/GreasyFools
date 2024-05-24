@@ -58,9 +58,9 @@ namespace GreasyFools
       character.isSupport = false;
       character.usesAllAbilities = false;
       character.appearsInShops = true;
-      character.hurtSound = LoadedAssetsHandler.GetCharcater("Burnout_CH").damageSound;
-      character.deathSound = LoadedAssetsHandler.GetCharcater("Kleiver_CH").deathSound;
-      character.dialogueSound = LoadedAssetsHandler.GetCharcater("Burnout_CH").dxSound;
+      character.hurtSound = "event:/Greasy/Gourd/GourdHurt";
+      character.deathSound = "event:/Greasy/Gourd/GourdDeath";
+      character.dialogueSound = "event:/Greasy/Gourd/GourdTalk";
       character.passives = new BasePassiveAbilitySO[1]
       {
         (BasePassiveAbilitySO) instance3
@@ -84,7 +84,7 @@ namespace GreasyFools
       ability1.visuals = (AttackVisualsSO) null;
       ability1.animationTarget = (BaseCombatTargettingSO) MultiTargetting.Create(Slots.Front, (BaseCombatTargettingSO) TargettingByTargetting.Create(Slots.Front, Slots.Sides));
       ability1.effects = new Effect[4];
-      ability1.effects[0] = new Effect((EffectSO) EZEffects.GetVisuals<AnimationVisualsEffect>("Crush_A", false, ability1.animationTarget), 1, new IntentType?(), Slots.Self, (EffectConditionSO) HasTumorsCondition.Create(2));
+      ability1.effects[0] = new Effect((EffectSO) EZEffects.GetVisuals<AnimationVisualsEffect>("Greasy/Decay", false, ability1.animationTarget), 1, new IntentType?(), Slots.Self, (EffectConditionSO) HasTumorsCondition.Create(2));
       ability1.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 8, new IntentType?((IntentType) 2), ability1.animationTarget, (EffectConditionSO) HasTumorsCondition.Create(2));
       ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), ability1.animationTarget, (EffectConditionSO) HasTumorsCondition.Create(2));
       ability1.effects[3] = new Effect((EffectSO) instance1, 2, new IntentType?((IntentType) 100), Slots.Self, (EffectConditionSO) HasTumorsCondition.Create(2));
@@ -112,7 +112,7 @@ namespace GreasyFools
         Pigments.Blue,
         Pigments.Red
       };
-      ability5.visuals = LoadedAssetsHandler.GetCharacterAbility("Wrath_1_A").visuals;
+      ability5.visuals = LoadedAssetsHandler.GetCharacterAbility("Amalgam_1_A").visuals;
       ability5.animationTarget = Slots.Self;
       ability5.effects = new Effect[8];
       ability5.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 100), Slots.Self);

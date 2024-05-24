@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => FelRoom.chara.frontSprite;
 
-    private static Sprite Portal => FelRoom.chara.unlockedSprite;
+    private static Sprite Portal => FelRoom.chara.overworldSprite;
 
     private static string Audio => FelRoom.chara.dialogueSound;
 

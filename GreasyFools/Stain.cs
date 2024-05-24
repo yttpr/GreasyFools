@@ -33,9 +33,9 @@ namespace GreasyFools
         overworldSprite = ResourceLoader.LoadSprite("Stainworld.png", pivot: new Vector2?(new Vector2(0.5f, 0.0f))),
         unlockedSprite = ResourceLoader.LoadSprite("Stainmenu.png"),
         lockedSprite = ResourceLoader.LoadSprite("Stainmenu.png"),
-        hurtSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").damageSound,
-        deathSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").deathSound,
-        dialogueSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").dxSound,
+        hurtSound = "event:/Greasy/Stain/StainHurt",
+        deathSound = "event:/Greasy/Stain/StainDeath",
+        dialogueSound = "event:/Greasy/Stain/StainTalk",
         passives = new BasePassiveAbilitySO[1]
         {
           DirectWrongPigmentHandler.Passive
@@ -85,7 +85,7 @@ namespace GreasyFools
         Pigments.Red,
         Pigments.Red
       };
-      ability5.visuals = LoadedAssetsHandler.GetCharacterAbility("Entrenched_1_A").visuals;
+      ability5.visuals = CustomVisuals.GetVisuals("Greasy/Forge");
       ability5.animationTarget = Slots.Self;
       ability5.effects = new Effect[2];
       ability5.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 4, new IntentType?((IntentType) 171), Slots.Self);
@@ -132,7 +132,7 @@ namespace GreasyFools
       ability11.effects[1]._entryVariable = 12;
       ability11.effects[1]._intent = new IntentType?((IntentType) 3);
       Ability ability12 = ability11.Duplicate();
-      ability12.name = "Cleave Bone";
+      ability12.name = "Cleave Bone"; //gay
       ability12.description = "Deal 11 damage to the Left and Right enemies, deal 15 damage instead if wrong pigment was used.";
       ability12.effects[0]._entryVariable = 11;
       ability12.effects[0]._intent = new IntentType?((IntentType) 3);

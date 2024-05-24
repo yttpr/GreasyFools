@@ -31,9 +31,9 @@ namespace GreasyFools
       character.isSupport = false;
       character.usesAllAbilities = false;
       character.appearsInShops = true;
-      character.hurtSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").damageSound;
-      character.deathSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").deathSound;
-      character.dialogueSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").dxSound;
+      character.hurtSound = "event:/Greasy/Derek/DerekHurt";
+      character.deathSound = "event:/Greasy/Derek/DerekDeath";
+      character.dialogueSound = "event:/Greasy/Derek/DerekTalk";
       Ability ability1 = new Ability();
       ability1.sprite = ResourceLoader.LoadSprite("Pummel.png");
       ability1.name = "Pummel the Guard";
@@ -49,7 +49,7 @@ namespace GreasyFools
       ability1.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DoubleDamageIfCenterEffect>(), 6, new IntentType?((IntentType) 3), Slots.Front);
       ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoveToCenterEffect>(), 1, new IntentType?((IntentType) 40), Slots.Front);
       ability1.animationTarget = Slots.Front;
-      ability1.visuals = LoadedAssetsHandler.GetEnemy("OsmanSinnoks_BOSS").abilities[0].ability.visuals;
+            ability1.visuals = CustomVisuals.GetVisuals("Greasy/Pummel");//LoadedAssetsHandler.GetEnemy("OsmanSinnoks_BOSS").abilities[0].ability.visuals;
       Ability ability2 = ability1.Duplicate();
       ability2.name = "Pummel the Armor";
       ability2.description = "Deal 8 damage to the Opposing enemy. Deal double if this party member is in the center position.\nMove the Opposing enemy towards the center of the field.";
@@ -84,7 +84,7 @@ namespace GreasyFools
       ability5.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.Front, (EffectConditionSO) ScriptableObject.CreateInstance<OnEdgeCondition>());
       ability5.effects[4] = ability1.effects[2];
       ability5.animationTarget = Slots.Front;
-      ability5.visuals = LoadedAssetsHandler.GetEnemyAbility("UglyOnTheInside_A").visuals;
+      ability5.visuals = CustomVisuals.GetVisuals("Greasy/Intimidate");
       Ability ability6 = ability5.Duplicate();
       ability6.name = "Terrifying Intimidate";
       ability6.description = "Deal 5 damage to the Opposing enemy and inflict 1 Scar. If this party member is on the edge of the field, deal double damage and inflict another 2 Scars. \nMove the Opposing enemy towards the center of the field.";
@@ -116,7 +116,7 @@ namespace GreasyFools
       ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 3, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) TargettingByTargetting.Create((BaseCombatTargettingSO) instance2, Slots.Front));
       ability9.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 6, new IntentType?((IntentType) 171), (BaseCombatTargettingSO) instance2);
       ability9.animationTarget = (BaseCombatTargettingSO) instance2;
-      ability9.visuals = LoadedAssetsHandler.GetCharacterAbility("Entrenched_1_A").visuals;
+            ability9.visuals = CustomVisuals.GetVisuals("Greasy/Buckler");//LoadedAssetsHandler.GetCharacterAbility("Entrenched_1_A").visuals;
       Ability ability10 = ability9.Duplicate();
       ability10.name = "Wieldy Buckler";
       ability10.description = "Deal 4 damage to the enemy facing the lowest health party member, then apply 8 Shield to that party member's position.";

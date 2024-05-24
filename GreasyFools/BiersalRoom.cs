@@ -43,7 +43,7 @@ namespace GreasyFools
 
     private static Sprite Talk => BiersalRoom.chara.frontSprite;
 
-    private static Sprite Portal => BiersalRoom.chara.unlockedSprite;
+    private static Sprite Portal => BiersalRoom.chara.overworldSprite;
 
     private static string Audio => BiersalRoom.chara.dialogueSound;
 

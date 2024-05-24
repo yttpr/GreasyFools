@@ -56,9 +56,9 @@ namespace GreasyFools
       character.ignoredAbilities = new List<int>() { 1 };
       character.usesAllAbilities = false;
       character.appearsInShops = true;
-      character.hurtSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").damageSound;
-      character.deathSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").deathSound;
-      character.dialogueSound = LoadedAssetsHandler.GetCharcater("Griffin_CH").dxSound;
+      character.hurtSound = "event:/Greasy/Quorell/QuorellHurt";
+      character.deathSound = "event:/Greasy/Quorell/QuorellDeath";
+      character.dialogueSound = "event:/Greasy/Quorell/QuorellTalk";
       character.passives = new BasePassiveAbilitySO[1]
       {
         Passives.Delicate
@@ -108,7 +108,7 @@ namespace GreasyFools
       ability5.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<MultiplyExitByEntryEffect>(), 3, new IntentType?(), Slots.Self);
       ability5.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamagePlusExitEffect>(), 5, new IntentType?((IntentType) 1), Slots.Front);
       ability5.animationTarget = Slots.Front;
-      ability5.visuals = LoadedAssetsHandler.GetCharcater("Anton_CH").rankedData[0].rankAbilities[2].ability.visuals;
+      ability5.visuals = CustomVisuals.GetVisuals("Greasy/Nullify");
       Ability ability6 = ability5.Duplicate();
       ability6.name = "Impressive Nullify";
       ability6.description = "Remove all Status Effects from this party member and deal 7 damage to the Opposing enemy + 4 for each type of Status Effect removed.";
@@ -138,7 +138,7 @@ namespace GreasyFools
       ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyCursedEffect>(), 1, new IntentType?((IntentType) 152), Slots.Front);
       ability9.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyFrailEffect>(), 1, new IntentType?((IntentType) 150), Slots.Front);
       ability9.animationTarget = Slots.Front;
-      ability9.visuals = LoadedAssetsHandler.GetEnemy("JumbleGuts_Waning_EN").abilities[0].ability.visuals;
+      ability9.visuals = CustomVisuals.GetVisuals("Greasy/Affliction");
       Ability ability10 = ability9.Duplicate();
       ability10.name = "Baleful Affliction";
       ability10.description = "Inflict Cursed, 1 Frail, and 1 Scar on the Opposing enemy.";

@@ -33,9 +33,9 @@ namespace GreasyFools
         overworldSprite = ResourceLoader.LoadSprite("FelWorld.png", pivot: new Vector2?(new Vector2(0.5f, 0.0f))),
         unlockedSprite = ResourceLoader.LoadSprite("FelMenu.png"),
         lockedSprite = ResourceLoader.LoadSprite("FelMenu.png"),
-        hurtSound = LoadedAssetsHandler.GetCharcater("Thype_CH").damageSound,
-        deathSound = LoadedAssetsHandler.GetCharcater("Thype_CH").deathSound,
-        dialogueSound = LoadedAssetsHandler.GetCharcater("Thype_CH").dxSound,
+        hurtSound = "event:/Greasy/Fel/FelHurt",
+        deathSound = "event:/Greasy/Fel/FelDeath",
+        dialogueSound = "event:/Greasy/Fel/FelTalk",
         passives = new BasePassiveAbilitySO[1]
         {
           Passiver.Multiattack(2, true)
@@ -50,7 +50,7 @@ namespace GreasyFools
         Pigments.Red,
         Pigments.Blue
       };
-      ability1.visuals = LoadedAssetsHandler.GetCharacterAbility("Mend_1_A").visuals;
+      ability1.visuals = LoadedAssetsHandler.GetCharacterAbility("Weave_1_A").visuals;
       ability1.animationTarget = Slots.Sides;
       ability1.effects = new Effect[1];
       ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<HealRandom0ToEntryEffect>(), 4, new IntentType?((IntentType) 20), Slots.Sides);
@@ -110,7 +110,7 @@ namespace GreasyFools
       ability9.description = "Remove Constricted from this party member's position and restore their movement. \nApply 1-3 Shield to this party member's position.";
       ability9.sprite = ResourceLoader.LoadSprite("Vindicate.png");
       ability9.cost = new ManaColorSO[1]{ Pigments.Blue };
-      ability9.visuals = LoadedAssetsHandler.GetCharacterAbility("Entrenched_1_A").visuals;
+      ability9.visuals = CustomVisuals.GetVisuals("Greasy/Vindicate");
       ability9.animationTarget = Slots.Self;
       ability9.effects = new Effect[4];
       ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RemoveConstrictedEffect>(), 1, new IntentType?((IntentType) 210), Slots.Self);

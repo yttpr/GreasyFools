@@ -26,7 +26,8 @@ namespace GreasyFools
       where T : AnimationVisualsEffect
     {
       AnimationVisualsEffect instance = (AnimationVisualsEffect) ScriptableObject.CreateInstance<T>();
-      instance._visuals = !isChara ? LoadedAssetsHandler.GetEnemyAbility(visuals).visuals : LoadedAssetsHandler.GetCharacterAbility(visuals).visuals;
+            if (CustomVisuals.GetVisuals(visuals) != null) instance._visuals = CustomVisuals.GetVisuals(visuals);
+            else instance._visuals = !isChara ? LoadedAssetsHandler.GetEnemyAbility(visuals).visuals : LoadedAssetsHandler.GetCharacterAbility(visuals).visuals;
       instance._animationTarget = targets;
       return instance;
     }

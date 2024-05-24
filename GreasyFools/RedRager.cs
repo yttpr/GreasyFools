@@ -65,9 +65,9 @@ namespace GreasyFools
       character.isSupport = false;
       character.usesAllAbilities = false;
       character.appearsInShops = true;
-      character.hurtSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").damageSound;
-      character.deathSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").deathSound;
-      character.dialogueSound = LoadedAssetsHandler.GetCharcater("Boyle_CH").dxSound;
+      character.hurtSound = "event:/Greasy/Rager/RagerHurt";
+      character.deathSound = "event:/Greasy/Rager/RagerDeath";
+      character.dialogueSound = "event:/Greasy/Rager/RagerTalk";
       character.passives = new BasePassiveAbilitySO[1]
       {
         (BasePassiveAbilitySO) instance3
@@ -152,7 +152,7 @@ namespace GreasyFools
       ability5.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability5.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?((IntentType) 171), Slots.Self);
       ability5.animationTarget = Slots.Self;
-      ability5.visuals = LoadedAssetsHandler.GetCharcater("Clive_CH").rankedData[0].rankAbilities[2].ability.visuals;
+      ability5.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability6 = new Ability();
       ability6.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability6.name = "Light Sleep";
@@ -167,7 +167,7 @@ namespace GreasyFools
       ability6.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability6.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 3, new IntentType?((IntentType) 171), Slots.Self);
       ability6.animationTarget = Slots.Self;
-      ability6.visuals = LoadedAssetsHandler.GetCharcater("Clive_CH").rankedData[0].rankAbilities[2].ability.visuals;
+      ability6.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability7 = new Ability();
       ability7.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability7.name = "Deep Sleep";
@@ -182,7 +182,7 @@ namespace GreasyFools
       ability7.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability7.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 4, new IntentType?((IntentType) 171), Slots.Self);
       ability7.animationTarget = Slots.Self;
-      ability7.visuals = LoadedAssetsHandler.GetCharcater("Clive_CH").rankedData[0].rankAbilities[2].ability.visuals;
+      ability7.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability8 = new Ability();
       ability8.sprite = ResourceLoader.LoadSprite("sleep", 1);
       ability8.name = "THE Sleep";
@@ -197,7 +197,7 @@ namespace GreasyFools
       ability8.effects[1] = new Effect((EffectSO) instance5, 1, new IntentType?(), Slots.Self);
       ability8.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 5, new IntentType?((IntentType) 171), Slots.Self);
       ability8.animationTarget = Slots.Self;
-      ability8.visuals = LoadedAssetsHandler.GetCharcater("Clive_CH").rankedData[0].rankAbilities[2].ability.visuals;
+      ability8.visuals = CustomVisuals.GetVisuals("Greasy/Sleep");
       Ability ability9 = new Ability();
       ability9.sprite = ResourceLoader.LoadSprite("essence", 1);
       ability9.name = "Healing Essence";
