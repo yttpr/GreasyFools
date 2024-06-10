@@ -13,7 +13,7 @@ using UnityEngine;
 #nullable disable
 namespace GreasyFools
 {
-  [BepInPlugin("GreasySatan.GreasyFools", "Greasy Fools", "1.0.0")]
+  [BepInPlugin("GreasySatan.GreasyFools", "Greasy Fools", "1.0.1")]
     [BepInDependency("Bones404.BrutalAPI", (BepInDependency.DependencyFlags)1)]
     public class GreasyFools : BaseUnityPlugin
   {

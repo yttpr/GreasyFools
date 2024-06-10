@@ -38,7 +38,7 @@ namespace GreasyFools
       {
         exitAmount += this._increase ? entryVariable : -entryVariable;
         exitAmount = Mathf.Max(this._minimumValue, exitAmount);
-        //caster.SetStoredValue(this._valueName, exitAmount);
+        caster.SetStoredValue(this._valueName, exitAmount);
         flag = true;
       }
       return flag;
